@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Result</title>
+</head>
+<body>
+    <h1>Assessment Result for {{ username }}</h1>
+    <p>Your score: {{ score }} / {{ questions|length }}</p>
+    
+    <h2>Correct Answers:</h2>
+    <ul>
+        {% for question in questions %}
+            <li>{{ question['question'] }} - <strong>Correct answer:</strong> {{ question['answer'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

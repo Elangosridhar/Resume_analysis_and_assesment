@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Interview</title>
+    <script src="{{ url_for('static', filename='js/demo_interview.js') }}"></script>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f4f4f4;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        a {
+            color: #000;
+            font-size: 18px;
+            text-decoration: none;
+            display: block;
+            margin: 20px 0;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 4px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+
+        video {
+            border: 2px solid #000;
+            margin: 20px 0;
+        }
+
+        #downloadLink {
+            font-size: 18px;
+            display: none;
+            color: #000;
+            text-decoration: none;
+        }
+
+        #downloadLink:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Demo Interview for {{ username }}</h1>
+    <a href="{{ url_for('start_demo_interview', username=username) }}">Start Demo Interview</a>
+
+    <!-- Video element to display the live feed -->
+    <video id="videoElement" width="600" height="400" autoplay></video><br><br>
+
+    <!-- Buttons to start and stop recording -->
+    <button type="button" onclick="startRecording()">Start Recording</button>
+    <button type="button" onclick="stopRecording()">Stop Recording</button>
+
+    <!-- Link to download the recorded video (only visible after recording) -->
+    <a id="downloadLink" href="#">Download Recorded Video</a>
+</body>
+</html>

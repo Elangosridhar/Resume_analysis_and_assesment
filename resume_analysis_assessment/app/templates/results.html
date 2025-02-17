@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis Results</title>
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif;
+            background-color: #f4f4f4;
+            color: #000;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+        p, ul {
+            margin: 20px;
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 30px;
+        }
+
+        button {
+            background-color: #000;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+            margin: 20px 10px;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resume Analysis for {{ username }}</h1>
+    
+    <h2>Resume Text:</h2>
+    <p>{{ resume_text }}</p>
+
+    <h2>ATS Resume Score: {{ ats_score }}</h2>
+    
+    <h3>Extracted Skills:</h3>
+    <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <!-- You can add further analysis or ATS scores here later -->
+    <form action="{{ url_for('start_assessment', username=username) }}" method="POST">
+        <button type="submit">Start Assessment</button>
+    </form>
+
+    <form action="{{ url_for('start_demo_interview', username=username) }}" method="POST">
+        <button type="submit">Start Demo Interview</button>
+    </form>
+
+</body>
+</html>

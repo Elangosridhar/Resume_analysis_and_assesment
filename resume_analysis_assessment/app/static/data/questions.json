@@ -1,0 +1,18 @@
+{
+    "Python": [
+      "What is your experience with Python?",
+      "Can you explain how you would handle exception handling in Python?",
+      "How would you optimize a Python program for performance?"
+    ],
+    "Machine Learning": [
+      "Can you explain the difference between supervised and unsupervised learning?",
+      "What is your experience with TensorFlow or PyTorch?",
+      "How would you deal with overfitting in machine learning models?"
+    ],
+    "SQL": [
+      "How would you write a query to join multiple tables?",
+      "What are the different types of joins in SQL?",
+      "Can you explain normalization in databases?"
+    ]
+  }
+  

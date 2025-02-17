@@ -1,0 +1,12 @@
+# List of dependencies (Flask, NLP libraries, etc.)
+Flask==2.3.2
+Flask-PyMongo==2.3.0
+flask-login==0.6.2
+pandas==1.5.3
+nltk==3.7
+spacy==3.5.0
+python-dotenv==1.0.0
+opencv-python==4.7.0.72  # For video capturing (if needed)
+scikit-learn==1.2.0  # For any machine learning models (if used)
+matplotlib==3.7.0  # For visualization charts (if required)
+pdfplumber==0.7.8  # For reading PDF resumes
